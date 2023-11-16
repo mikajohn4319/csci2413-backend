@@ -13,6 +13,7 @@ builder.Services.AddTransient<AppDb>(_ =>
 );
 builder.Services.AddSwaggerGen();
 
+/*
 builder.Services.AddCors(options =>
 {
     options.AddDefaultPolicy(
@@ -23,6 +24,7 @@ builder.Services.AddCors(options =>
                                 .AllowAnyMethod();;
                       });
 });
+*/
 
 var app = builder.Build();
 
@@ -35,7 +37,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.UseCors();
+//app.UseCors();
 
 app.UseAuthorization();
 
